@@ -1,0 +1,41 @@
+<form [formGroup]="formAdd" (ngSubmit)="Onsubmit()">
+    <label for="ctmUser">ชื่อผู้ใช้</label>
+    <input type="text" formControlName="ctmUser" placeholder="ชื่อผู้ใช้"><br>
+    <label for="ctmPassword">รหัสผ่านผู้ใช้</label>
+    <input type="text" formControlName="ctmPassword" placeholder="รหัสผ่านผู้ใช้"><br>
+    <label for="">คำนำหน้า</label>
+    <select formControlName="ctmTitle">
+        <option value="นาย">นาย</option>
+        <option value="นาย">นาง</option>
+        <option value="นาย">นางสาว</option>
+    </select>
+    <label for="ctmFirstname">ชื่อ</label>
+    <input type="text" formControlName="ctmFirstname" placeholder="ชื่อ"><br>
+    <label for="ctmLastname">นามสกุล</label>
+    <input type="text" formControlName="ctmLastname" placeholder="นามสกุล"><br>
+    <label for="ctmGender">เพศ</label>
+    <input type="text" formControlName="ctmGender" placeholder="เพศ"><br>
+    <label for="ctmBirth">วัน/เดือน/ปีเกิด</label>
+    <input type="text" formControlName="ctmBirth" placeholder="วัน/เดือน/ปีเกิด"><br>
+    <label for="ctmPhon">เบอร์โทรศัพท์</label>
+    <input type="text" formControlName="ctmPhon" placeholder="เบอร์โทรศัพท์"><br>
+    <label for="ctmEmail">อีเมล</label>
+    <input type="text" formControlName="ctmEmail" placeholder="อีเมล"><br>
+    <label for="ctmAddrss">ที่อยู่</label>
+    <input type="text" formControlName="ctmAddrss" placeholder="ที่อยู่"><br>
+    <label for="ctmUniversity">มหาวิทยาลัย</label>
+    <input type="text" formControlName="ctmUniversity" placeholder="มหาวิทยาลัย"><br>
+    <label for="ctmFaculty">คณะ</label>
+    <input type="text" formControlName="ctmFaculty" placeholder="คณะ"><br>
+    <label for="ctmMajor">สาขาวิชา</label>
+    <input type="text" formControlName="ctmMajor" placeholder="สาขาวิชา"><br>
+    <label for="ctmWeight">น้ำหนัก</label>
+    <input type="text" formControlName="ctmWeight" placeholder="น้ำหนัก"><br>
+    <label for="ctmHeight">ส่วนสูง</label>
+    <input type="text" formControlName="ctmHeight" placeholder="ส่วนสูง"><br>
+    <label for="ctmStatus">สถานะ</label>
+    <input type="text" formControlName="ctmStatus" placeholder="สถานะ"><br>
+    <label for="zipCode">รหัสไปรษณีย์</label>
+    <input type="text" formControlName="zipCode" placeholder="รหัสไปรษณีย์"><br>
+    <button>ยืนยันข้อมูล</button>
+</form>

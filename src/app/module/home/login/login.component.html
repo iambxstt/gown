@@ -1,0 +1,30 @@
+<div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="card flex-shrink-0 w-full max-w-sm  bg-base-100 border-x-orange-400 ">
+            <div class="card-body">
+                <div class="text-center">
+                    <h1 class="text-2xl font-bold">เข้าสู่ระบบ</h1>
+                </div>
+                <form [formGroup]="loginform" (ngSubmit)="Onsubmit()">
+                    <label class="label">
+                        <span class="label-text">รหัสนักศึกษา</span>
+                    </label>
+                    <input type="text" placeholder="ระบุรหัสนักศึกษา" class="input input-bordered input-warning w-full max-w-xs"
+                        formControlName="ctmUser" />
+                    <label class="label">
+                        <span class="label-text">เบอร์โทรศัพท์มือถือ</span>
+                    </label>
+                    <input type="text" placeholder="ระบุเบอร์โทรศัพท์มือถือ" class="input input-bordered input-warning w-full max-w-xs"
+                        formControlName="ctmPassword"/>
+                    <label class="label">
+                        <a href="#" class="label-text-alt link link-hover">ไม่พบข้อมูล ?</a>
+                    </label>
+
+                    <div class="form-control mt-6">
+                        <button class="btn bg-cyan-600 ">เข้าสู่ระบบ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
