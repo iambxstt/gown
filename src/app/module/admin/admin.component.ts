@@ -40,4 +40,7 @@ export class AdminComponent implements OnInit{
       }
     })
   }
+  OngetId(item : any){
+    this.router.navigate([ 'admin/edit/'+item.ctmId ])
+  }
 }

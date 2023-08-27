@@ -1,0 +1,30 @@
+
+<form [formGroup]="formAdd" (ngSubmit)="Onsubmit()">
+    <label for="ctmUser">ชื่อผู้ใช้</label>
+    <input type="text" id="ctmUser" formControlName="ctmUser" placeholder="ชื่อผู้ใช้"><br>
+    <label for="ctmPassword">รหัสผ่านผู้ใช้</label>
+    <input type="text" id="ctmPassword" formControlName="ctmPassword" placeholder="รหัสผ่านผู้ใช้"><br>
+    <label for="">คำนำหน้า</label>
+    <select formControlName="ctmTitle">
+        <option selected="">---คำนำหน้า---</option>
+        <option value="นาย">นาย</option>
+        <option value="นาย">นาง</option>
+        <option value="นาย">นางสาว</option>
+    </select>
+    <label for="ctmFirstname">ชื่อ</label>
+    <input type="text" id="ctmFirstname" formControlName="ctmFirstname" placeholder="ชื่อ"><br>
+    <label for="ctmLastname">นามสกุล</label>
+    <input type="text" id="ctmLastname" formControlName="ctmLastname" placeholder="นามสกุล"><br>
+    <label for="ctmPhon">เบอร์โทรศัพท์</label>
+    <input type="text" id="ctmPhon" formControlName="ctmPhon" placeholder="เบอร์โทรศัพท์"><br>
+    <label for="ctmEmail">อีเมล</label>
+    <input type="text" id="ctmEmail" formControlName="ctmEmail" placeholder="อีเมล"><br>
+    <label for="ctmUniversity">มหาวิทยาลัย</label>
+    <input type="text" id="ctmUniversity" formControlName="ctmUniversity" placeholder="มหาวิทยาลัย"><br>
+    <label for="ctmFaculty">คณะ</label>
+    <input type="text" id="ctmFaculty" formControlName="ctmFaculty" placeholder="คณะ"><br>
+    <label for="ctmMajor">สาขาวิชา</label>
+    <input type="text" id="ctmMajor" formControlName="ctmMajor" placeholder="สาขาวิชา"><br>
+    <button type="submit">ยืนยันข้อมูล</button>
+</form>
+

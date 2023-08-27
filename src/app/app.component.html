@@ -1,3 +1,81 @@
-<router-outlet>
-    
-</router-outlet>
+<!-- <div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+        </label>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a>Homepage</a></li>
+          <li><a>Portfolio</a></li>
+          <li><a>About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-center">
+      <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+    </div>
+    <div class="navbar-end">
+      <button class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+      </button>
+      <button class="btn btn-ghost btn-circle">
+        <div class="indicator">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+          <span class="badge badge-xs badge-primary indicator-item"></span>
+        </div>
+      </button>
+    </div>
+  </div> -->
+  <!-- <nav class="fixed w-full z-20 top-0 left-0 border-b " style="background-image:url(assets/image/bg.jpg);">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a class="flex items-center">
+        <img
+          src="https://scontent.xx.fbcdn.net/v/t1.15752-9/358738684_579160814295260_1195878599430119517_n.png?stp=dst-png_p206x206&_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHikSWLjxk25RyB6BjNr5tOvC3ya_lx8v-8LfJr-XHy_wVjG08GO4FlG2hKRo3XCTASiG1k9QSd_ScBslfG3Fy3&_nc_ohc=rRMy7s0GlV8AX9npMWr&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQ8Oe1SJ1tb-FJRrWnyTDe7qWrkcX__YT-2JW8JW1tq5g&oe=64E0C00A"
+          class="h-24 mr-3" alt="">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">เช่าชุดครุยออนไลน์</span>
+      </a>
+      <div class="flex md:order-2">
+        <button type="button"
+          class="text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-xl px-4 py-2 text-center mr-3 md:mr-0 dark:bg-yellow-400 dark:hover:bg-yellow-500 dark:focus:ring-yellow-600">เข้าสู่ระบบ</button>
+        <button data-collapse-toggle="navbar-sticky" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul
+          class="flex flex-col p-4 md:p-0 mt-4 font-medium border md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg dark:bg-white md:dark:bg-white dark:border-white">
+          <li>
+            <a href="/home"
+              class="block py-2 pl-3 pr-4 text-xl text-white rounded md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:dark:text-yellow-500 dark:text-white ">หน้าแรก</a>
+          </li>
+          <li>
+            <a href="/home/order"
+              class="block py-2 pl-3 pr-4 text-xl text-white rounded md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:dark:hover:text-yellow-400 dark:text-white ">สั่งจองชุดครุย</a>
+          </li>
+          <li>
+            <a href="/home/examplegown"
+              class="block py-2 pl-3 pr-4 text-xl text-white rounded md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:dark:hover:text-yellow-400 dark:text-white ">ตัวอย่างชุดครุย</a>
+          </li>
+          <li>
+            <a href="/home/subscribe"
+              class="block py-2 pl-3 pr-4 text-xl text-white rounded md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:dark:hover:text-yellow-400 dark:text-white ">ติดต่อเรา</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+<router-outlet></router-outlet>
+
+<div *ngIf="showFooter">
+  <footer class="text-xl footer footer-center p-6 bg-yellow-400 text-base-content font-bold">
+    <a routerLink="/home/login">
+      <p>© 2023 GownsOnline.com</p>
+    </a>
+  </footer>

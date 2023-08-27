@@ -1,11 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@100&display=swap');
+@import url('https://fonts.google.com/specimen/Oxygen');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 *{
-    font-family: 'Sarabun', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     box-sizing: border-box;
     margin: 0;
 
     font-size: 1rem;
 }
+
+
+
+  

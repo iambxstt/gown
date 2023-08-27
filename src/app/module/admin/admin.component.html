@@ -1,54 +1,62 @@
-<div class="user font-bold">
-    <table class="table">
-        <thead>
-            <tr class="thead">
-                <th scope="col">ลำดับ</th>
-                <th scope="col">รหัสลูกค้า</th>
-                <th scope="col">ชื่อผู้ใช้</th>
-                <th scope="col">รหัสผ่านผู้ใช้</th>
-                <th scope="col">คํานําหน้า</th>
-                <th scope="col">ชื่อ</th>
-                <th scope="col">นามสกุล</th>
-                <th scope="col">เพศ</th>
-                <th scope="col">วัน/เดือน/ปีเกิด</th>
-                <th scope="col">เบอร์โทรศัพท์</th>
-                <th scope="col">อีเมล</th>
-                <th scope="col">ที่อยู่</th>
-                <th scope="col">มหาวิทยาลัย</th>
-                <th scope="col">คณะ</th>
-                <th scope="col">สาขาวิชา</th>
-                <th scope="col">น้ำหนัก</th>
-                <th scope="col">ส่วนสูง</th>
-                <th scope="col">สถานะ</th>
-                <th scope="col">รหัสไปรษณีย์</th>
-                <th scope="col">รหัสประเภทผู้ใช้งาน</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of ListUser ; let i=index">
-                <th scope="row">{{i+1}}</th>
-                <td>{{item.ctmId}}</td>
-                <td>{{item.ctmUser}}</td>
-                <td>{{item.ctmPassword}}</td>
-                <td>{{item.ctmTitle}}</td>
-                <td>{{item.ctmFirstname}}</td>
-                <td>{{item.ctmLastname}}</td>
-                <td>{{item.ctmGender}}</td>
-                <td>{{item.ctmBirth}}</td>
-                <td>{{item.ctmPhon}}</td>
-                <td>{{item.ctmEmail}}</td>
-                <td>{{item.ctmAddrss}}</td>
-                <td>{{item.ctmUniversity}}</td>
-                <td>{{item.ctmFaculty}}</td>
-                <td>{{item.ctmMajor}}</td>
-                <td>{{item.ctmWeight}}</td>
-                <td>{{item.ctmHeight}}</td>
-                <td>{{item.ctmStatus}}</td>
-                <td>{{item.zipCode}}</td>
-                <td>{{item.roleId}}</td>
-                <td><button class="btn btn-error text-white" (click) = "ondelete(item)">delete</button></td>
-                <td><button class="btn btn-success text-white" routerLink = "../Add">add</button></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<header>
+  <nav class=" border-gray-200 px-4 lg:px-6 py-6" style="background-image:url(assets/image/bg.jpg);">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <a class="flex items-center text-yellow-500">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-16 h-16 mr-6">
+              <path
+                d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
+              <path
+                d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" />
+              <path
+                d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
+            </svg>
+              <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">ระบบเช่าชุดครุยออนไลน์ ONLINE</span>
+            </a>   
+            <div class="flex items-center lg:order-2">
+              <a routerLink="/home/login" class="text-white bg-amber-700 hover:bg-amber-800 focus:ring-4 focus:ring-amber-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-amber-600 dark:hover:bg-amber-700 focus:outline-none dark:focus:ring-amber-800">Get started</a>
+          </div>       
+      </div>
+  </nav>
+</header>
+
+
+<!-- ... -->
+<body class="min-h-screen bg-gray-100" >  
+  <section class="">
+    <div class=" px-4 mx-auto max-w-5xl lg:py-10 lg:px-3">
+        <div class="space-y-2 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+            <!-- Pricing Card -->
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <img class="object-cover w-full rounded-none h-48 md:h-full md:w-80 md:rounded-lg" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/254679713_2008412339335313_5824284669567659198_n.png?stp=dst-png_p206x206&_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeE76ktQMFmCqZL9pRBX2NUbyFsraTwkN5vIWytpPCQ3m-sl1PSr3pQ_ZdlslXDcEqnDj-IjsqpD-ASAgO5XkLjh&_nc_ohc=SJEqu92d6pQAX82r-Gi&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRRhciBtETzEWRmmzlFXIj92kTgSsY7uJJNZNdMkuCgng&oe=650ECFC4">
+              <a routerLink="../admin-home" class="mt-3 text-white bg-amber-500 hover:bg-amber-700 focus:ring-4 focus:ring-amber-200 font-medium rounded-lg text-lg px-5 py-2.5 text-center dark:text-white  dark:focus:ring-amber-900">หน้าแรก</a>
+            </div>
+            <!-- Pricing Card -->
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <img class="object-cover w-full rounded-none h-48 md:h-full md:w-80 md:rounded-lg" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/261987351_335618461273837_3377486868140327185_n.png?stp=dst-png_p206x206&_nc_cat=105&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGoj9sC1tt_f97Rx4f5Farr5w3LD26f_vznDcsPbp_-_BtsnOgKkjDnSWEpPOSlFcxIpiWTa29e-7nIRlh84tiO&_nc_ohc=NoCSGoUjBksAX_-qHX8&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRJvLbvGYGZ2Usy-lDtUGU5ftjvvmhGo9FYv-e74yLqxQ&oe=650EB143">
+              <a routerLink="../admin-custmer" class="mt-3 text-white bg-amber-500 hover:bg-amber-700 focus:ring-4 focus:ring-amber-200 font-medium rounded-lg text-xl px-5 py-2.5 text-center dark:text-white  dark:focus:ring-amber-900">จัดการข้อมูลผู้ใช้</a>
+            </div>
+            <!-- Pricing Card -->
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <img class="object-cover w-full rounded-none h-48 md:h-full md:w-80 md:rounded-lg" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/369033047_257536147124286_515442855769377812_n.png?stp=dst-png_p206x206&_nc_cat=108&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHJN2U5bubR-xbsN9WYaIrQQ0APBVqtLPdDQA8FWq0s92LJI8ZsVmAREF1Z3zQpNbz1udzUmsRFG29mdBYh-tYY&_nc_ohc=74vXDHatYbUAX9UsBbn&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQAWZSU0kvJv7yBSttQ1cVJJFBdm87hjCH0brQoBl-1lg&oe=650EBD22">
+              <a routerLink="../admin-gown" class="mt-3 text-white bg-amber-500 hover:bg-amber-700 focus:ring-4 focus:ring-amber-200 font-medium rounded-lg text-xl px-5 py-2.5 text-center dark:text-white  dark:focus:ring-amber-900">จัดการข้อมูลชุดครุย</a>
+            </div>
+            <!-- Pricing Card -->
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <img class="object-cover w-full rounded-none h-48 md:h-full md:w-80 md:rounded-lg" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/369243557_676620887316514_5160308836439374311_n.png?stp=dst-png_p206x206&_nc_cat=100&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHv42wKqKT5gwsED-73-_mF_lKDxaUDb2z-UoPFpQNvbLBEz_hRkhh_3ta3YY56M1o9m6YgolPUssczqHow77k3&_nc_ohc=gdVVdGKU9d0AX-MJrJS&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdR-EBtceUTP56si18FmKAGS2vp5AsmXDLQKEjRHdbznjQ&oe=650EB7FD">
+              <a routerLink="../admin-order" class="mt-3 text-white bg-amber-500 hover:bg-amber-700 focus:ring-4 focus:ring-amber-200 font-medium rounded-lg text-lg px-5 py-2.5 text-center dark:text-white  dark:focus:ring-amber-900">จัดการข้อมูลการเช่าชุดครุย</a>
+            </div>
+            <!-- Pricing Card -->
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <img class="object-cover w-full rounded-none h-48 md:h-full md:w-80 md:rounded-lg" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/300182184_1532612317167304_2708627173082301591_n.png?stp=dst-png_p206x206&_nc_cat=104&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeGFTttnA9BHFuG4GHOGaEG_NY57398a17E1jnvf3xrXsRwyVm9KGjwaXpYbwh5B5QpnCGtvD5RVek7vqq-1zZpJ&_nc_ohc=5Dvj3XM8DncAX9LmZd-&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSaWh5tUjby8z5gdwmdaHViW52M35h6OVcP1J1RLUFrAg&oe=650EBD6C">
+              <a routerLink="../admin-return-dress" class="mt-3 text-white bg-amber-500 hover:bg-amber-700 focus:ring-4 focus:ring-amber-200 font-medium rounded-lg text-xl px-1 py-2.5 text-center dark:text-white  dark:focus:ring-amber-900">จัดการข้อมูลส่ง-คืนชุดครุย</a>
+            </div>
+            <!-- Pricing Card -->
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <img class="object-cover w-full rounded-none h-48 md:h-full md:w-80 md:rounded-lg" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/293086172_804147197662335_8188826040175149687_n.png?stp=dst-png_p206x206&_nc_cat=106&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeEDaVr4fFO6AcrGXLXXzAmUI3wPDLH2_CIjfA8Msfb8IhqdB0bA72friCG3U0GeKJPQgGqbthPvGVKlEHLMk2QH&_nc_ohc=ata9Hw9qsZIAX-28IxW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQwrjdhvaRHQaYNby7GeaZCq9Nr0Rf1-0WeGLri3fDSCA&oe=650EB3DC">
+              <a routerLink="../admin-report" class="mt-3 text-white bg-amber-500 hover:bg-amber-700 focus:ring-4 focus:ring-amber-200 font-medium rounded-lg text-xl px-5 py-2.5 text-center dark:text-white  dark:focus:ring-amber-900">รายงานการเช่าชุดครุย</a>
+            </div>
+        </div>
+    </div>
+  </section> 
+</body>
+

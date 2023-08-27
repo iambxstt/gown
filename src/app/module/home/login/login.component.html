@@ -1,30 +1,64 @@
-<div class="hero min-h-screen bg-base-200">
-    <div class="hero-content flex-col lg:flex-row-reverse">
-        <div class="card flex-shrink-0 w-full max-w-sm  bg-base-100 border-x-orange-400 ">
-            <div class="card-body">
-                <div class="text-center">
-                    <h1 class="text-2xl font-bold">เข้าสู่ระบบ</h1>
-                </div>
-                <form [formGroup]="loginform" (ngSubmit)="Onsubmit()">
-                    <label class="label">
-                        <span class="label-text">รหัสนักศึกษา</span>
-                    </label>
-                    <input type="text" placeholder="ระบุรหัสนักศึกษา" class="input input-bordered input-warning w-full max-w-xs"
-                        formControlName="ctmUser" />
-                    <label class="label">
-                        <span class="label-text">เบอร์โทรศัพท์มือถือ</span>
-                    </label>
-                    <input type="text" placeholder="ระบุเบอร์โทรศัพท์มือถือ" class="input input-bordered input-warning w-full max-w-xs"
-                        formControlName="ctmPassword"/>
-                    <label class="label">
-                        <a href="#" class="label-text-alt link link-hover">ไม่พบข้อมูล ?</a>
-                    </label>
+<!-- component -->
 
-                    <div class="form-control mt-6">
-                        <button class="btn bg-cyan-600 ">เข้าสู่ระบบ</button>
-                    </div>
-                </form>
+<html lang="en" class="font-mono text-white  antialiased leading-tight">
+
+<body class="min-h-screen" style="background-image: url(assets/image/bg.jpg)">
+    <nav class="sticky ">
+        <span class="list-item "></span>
+        <ul class="flex space-x-20 justify-center">
+            <li><a href="/home">
+                    <div class="mask mask-circle p-6 bg-yellow-500"><img src="assets/image/home-icon.png"></div><br>
+                    <p class="text-xl font-thin text-center">หน้าแรก</p>
+                </a></li>
+            <li><a href="/home/register">
+                    <div class="mask mask-circle p-6 bg-yellow-500"><img src="assets/image/edit-icon.png"></div><br>
+                    <p class="text-xl font-thin text-center">สั่งจองครุย</p>
+                </a></li>
+        </ul>
+    </nav>
+    <ul class="container">
+        <li class="container ">
+            <div class="mx-auto max-w-screen-md mt-4 text-center mb-8 lg:mb-3">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white ">สำหรับเจ้าหน้าที่</h2>
+                <p class="font-extrabold text-yellow-500 sm:text-lg">STAFF ONLY</p>
             </div>
-        </div>
-    </div>
-</div>
+            <form [formGroup]="loginform" (ngSubmit)="Onsubmit()">
+                <div class="divide-y divide-gray-200">
+                    <div class=" text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                        <div class="p-10 flex-row w-3/6 h-fit rounded-lg text-center border-yellow-500"
+                            style=" margin-left: 25%">
+                            <div class="relative sm:w-96 mx-auto text-center">
+                                <div class="bg-gray-100 shadow-md rounded-lg text-left border-t-8 border-yellow-500">
+                                    <div class="px-8 py-6 ">
+                                        <div class="relative">
+                                            <label for="ctmUser" class="block mt-3 font-semibold text-black">Username</label>
+                                            <input autocomplete="off" id="ctmUser" name="ctmUser" type="text"
+                                                class="border text-black w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-black focus:ring-1 rounded-md"
+                                                placeholder="ระบุ Username" formControlName="ctmUser" />
+
+                                        </div>
+                                        <div class="relative">
+                                            <label for="ctmPassword"
+                                                class="block mt-3 font-semibold text-black">Password</label>
+                                            <input autocomplete="off" id="ctmPassword" name="ctmPassword"
+                                                type="ctmPassword"
+                                                class="border text-black w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-black focus:ring-1 rounded-md"
+                                                placeholder="ระบุ Password" formControlName="ctmPassword" />
+
+                                        </div>
+                                        <div class="relative flex justify-end items-baseline">
+                                            <button
+                                                class="mt-4 w-fit font-semibold bg-yellow-500 text-black py-2 px-2 rounded-md hover:bg-yellow-600">เข้าสู่ระบบ</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </li>
+    </ul>
+</body>
+</html>

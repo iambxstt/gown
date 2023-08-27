@@ -23,4 +23,8 @@ export class UserService {
   deleteById(ctmId: any):Observable<any>{
     return this.http.delete(API_ENDPOINT.concat('/Custmers/'+ctmId),httpoption)
   }
+  updateCustmers(ctmId: any,data: any):Observable<any>{
+    const body = JSON.stringify(data)
+    return this.http.put<any>(API_ENDPOINT.concat('/Custmers/'+ctmId),body,httpoption)
+  }
 }
